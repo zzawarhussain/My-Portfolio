@@ -1,0 +1,44 @@
+<div class="fixed w-full h-[50px] flex justify-between items-center px-4 bg-black text-gray-300">
+    <div>
+      <img src="/assets/Logo.png" alt="Logo Image" style="width: 70px;" />
+    </div>
+  
+    <!-- Menu -->
+    <ul class="hidden md:flex">
+      <li><a (click)="scrollToElement('home-section')">HOME</a></li>
+      <li><a (click)="scrollToElement('about-section')">ABOUT</a></li>
+      <li><a (click)="scrollToElement('skills-section')">SKILLS</a></li>
+      <li><a (click)="scrollToElement('projects-section')">PROJECTS</a></li>
+      <li><a (click)="scrollToElement('contact-section')">CONTACT</a></li>
+    </ul>
+  
+    <!-- Hamburger -->
+    <div (click)="handleClick()" class="md:hidden z-10">
+      <ng-container *ngIf="!nav"><i class="fas fa-bars"></i></ng-container>
+      <ng-container *ngIf="nav"><i class="fas fa-times"></i></ng-container>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <ul class="absolute top-0 left-0 w-full h-screen bg-black flex flex-col justify-center items-center" [ngClass]="{ 'hidden': !nav }">
+      <li class="py-6 text-2xl"><a (click)="handleClick()" (click)="scrollToElement('home-section')">HOME</a></li>
+      <li class="py-6 text-2xl"><a (click)="handleClick()" (click)="scrollToElement('about-section')">ABOUT</a></li>
+      <li class="py-6 text-2xl"><a (click)="handleClick()" (click)="scrollToElement('skills-section')">SKILLS</a></li>
+      <li class="py-6 text-2xl"><a (click)="handleClick()" (click)="scrollToElement('projects-section')">PROJECTS</a></li>
+      <li class="py-6 text-2xl"><a (click)="handleClick()" (click)="scrollToElement('contact-section')">CONTACT</a></li>
+    </ul>
+  
+    <!-- Social Icons -->
+    <div class="hidden lg:flex fixed flex-col top-[35%] left-0">
+      <ul>
+        <li class="w-[160px] h-[60ppx] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
+          <a class="flex justify-between items-center w-full text-gray-300" href="https://www.linkedin.com/in/zawar-hussain-aa89a9249">Linkedin <i class="fab fa-linkedin"></i></a>
+        </li>
+        <li class="w-[160px] h-[60ppx] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#12AD2B]">
+          <a class="flex justify-between items-center w-full text-gray-300" href="https://wa.me/qr/WBYEL2PAQMG3B1">Whatsapp <i class="fab fa-whatsapp"></i></a>
+        </li>
+        <li class="w-[160px] h-[60ppx] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
+          <a class="flex justify-between items-center w-full text-gray-300" href="https://github.com/zzawarhussain">GitHub<i class="fab fa-github"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>

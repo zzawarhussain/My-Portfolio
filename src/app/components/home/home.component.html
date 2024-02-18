@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div id="home-section" class="w-full h-screen bg-black">
+    <!-- container -->
+    <div class="max-w-[500px] mx-auto px-6 flex flex-col justify-center h-full">
+      <p class="text-red-600 font-bold">Hi, my name is</p>
+      <h1 class="text-2xl sm:text-3xl font-bold text-gray-300">Muhammad Zawar Hussain</h1>
+      <h2 class="text-2xl sm:text-3xl font-bold text-[#8892b0]">Software Engineer</h2>
+      <p class="text-[#8892b0] py-4 max-w-[500px]">I'm Software Engineer working as MEAN Stack and Ionic Developer. I'm passionate about creating great user experiences and committed to delivering high-quality, scalable solutions that exceed client expectations.
+      </p>
+      <div>
+        <button class="text-white group border-2 px-4 py-2 my-2 flex items-center hover:bg-red-600 hover:border-red-600" (click)="redirectToProjects()">
+          View Work
+          <span class="group-hover:rotate-90 Duration-300">
+            <i class="ml-2 fas fa-chevron-circle-right"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+<app-about></app-about>
+<app-skills></app-skills>
+<app-projects></app-projects>
+<app-contact></app-contact>
